@@ -33,6 +33,10 @@ class CredentialsValidator
         if(!array_key_exists('from', $credentials)) {
             $errors .= "from email not set\r\n";
         }
+        if(!array_key_exists('admin_notification_email', $credentials)) {
+            $errors .= "admin_notification_email not set\r\n";
+        }
+
         if(strlen($errors) > 0) {
             throw new KeyNotSetException($errors);
         }

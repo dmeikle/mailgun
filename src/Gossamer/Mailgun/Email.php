@@ -21,11 +21,71 @@ class Email
 {
     private $to;
 
+    private $toName;
+
+    private $fromName;
+
     private $from;
 
     private $subject;
 
     private $message;
+
+    private $htmlMessage;
+
+    /**
+     * @return mixed
+     */
+    public function getToName()
+    {
+        return $this->toName;
+    }
+
+    /**
+     * @param mixed $toName
+     * @return Email
+     */
+    public function setToName(array $toName)
+    {
+        $this->toName = $toName;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFromName()
+    {
+        return $this->fromName;
+    }
+
+    /**
+     * @param mixed $fromName
+     * @return Email
+     */
+    public function setFromName(array $fromName)
+    {
+        $this->fromName = $fromName;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getHtmlMessage()
+    {
+        return $this->htmlMessage;
+    }
+
+    /**
+     * @param mixed $htmlMessage
+     * @return Email
+     */
+    public function setHtmlMessage($htmlMessage)
+    {
+        $this->htmlMessage = $htmlMessage;
+        return $this;
+    }
 
     /**
      * @return mixed
@@ -99,6 +159,6 @@ class Email
         return $this;
     }
 
-    
-    
+
+
 }

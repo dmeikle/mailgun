@@ -10,7 +10,7 @@ define('__SITE_PATH', str_replace('/tests', '', $site_path));
 
 define('__CACHE_DIRECTORY', $site_path . '/tests/cache/');
 //include_once('phpunit.configuration.php');
-
+require_once (__SITE_PATH . '/vendor/autoload.php');
 require_once(__SITE_PATH . '/vendor/composer/ClassLoader.php');
 //require_once 'phpunit.systemfunctions.php';
 $loader = new Composer\Autoload\ClassLoader();
@@ -21,7 +21,7 @@ $loader = new Composer\Autoload\ClassLoader();
 //      $loader->add('Gossamer', __SITE_PATH .'/../vendor/gossamer/pesedget/src');
 //      $loader->add('Monolog', __SITE_PATH.'/../vendor/monolog/monolog/src');
 
-$loader->add('Mailgun', __SITE_PATH . '/vendor/mailgun');
+$loader->add('Mailgun', __SITE_PATH . '/vendor/mailgun/mailgun-php/src');
 $loader->add('Gossamer', __SITE_PATH . '/src');
 
 // activate the autoloader
